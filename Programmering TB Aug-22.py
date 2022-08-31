@@ -1,5 +1,4 @@
 #! python 3.10.4
-
 from colorama import Fore, init
 from datetime import datetime
 import random
@@ -76,6 +75,7 @@ def fun_5():
    desc = 'The largest number is: '
    print(desc, num_1) if num_1 > num_2 else print(desc, num_2)
 
+   
 def fun_6():
    guess_num = 0
    secret = random.randrange(1, 100, 1)
@@ -93,7 +93,6 @@ def fun_6():
          print('Your guess is larger than the sercet by about: ', random.randrange(1,abs(diff)+1,1))
       try_again = input('Do you want to try again? (y/n) ')
    print('The secret was:', secret, 'you have tried: ', guess_num, ' Times')
-
 
 
 def fun_7():
@@ -120,6 +119,7 @@ def fun_10():
    format_row = '{:<4}' * (len(data) + 1)
    [print(format_row.format('', *[m*n for n in data])) for m in data]
 
+   
 # bubble sort
 def fun_11():
    array = [random.randrange(0, 1000) for i in range(1,100)]
@@ -144,6 +144,7 @@ def fun_12():
          return None
    print('Palindrome')
 
+   
 def fun_13():
    num_1 = capture_user_input_int('Please enter first number: ')
    num_2 = capture_user_input_int('Please enter second number: ')
@@ -196,29 +197,28 @@ def fun_16():
    opponent = Player(opponent_name)
    opponent.info()
    
-
-      
-
+    
 funcs = {'0':(fun_0, 'Exit'),
          '1':(fun_1, 'Hellow World'),
          '2':(fun_2, 'Name And Age'),
-         '3':(fun_3, ''),
-         '4':(fun_4, ''),
-         '5':(fun_5, ''),
-         '6':(fun_6, ''),
-         '7':(fun_7, ''),
-         '8':(fun_8, ''),
-         '9':(fun_9, ''),
-         '10':(fun_10, ''),
-         '11':(fun_11, ''),
-         '12':(fun_12, ''),
-         '13':(fun_13, ''),
-         '14':(fun_14, ''),
-         '15':(fun_15, ''),
-         '16':(fun_16, '')}
+         '3':(fun_3, 'Redify/Rest text color'),
+         '4':(fun_4, 'Date and Time'),
+         '5':(fun_5, 'Bigger num'),
+         '6':(fun_6, 'Guess the num'),
+         '7':(fun_7, 'Write 2 file'),
+         '8':(fun_8, 'Read from the file'),
+         '9':(fun_9, 'Squre root, square and power 10'),
+         '10':(fun_10, 'Multiplication table'),
+         '11':(fun_11, 'bubble sort'),
+         '12':(fun_12, 'Palindrome'),
+         '13':(fun_13, 'Number in a range'),
+         '14':(fun_14, 'Odd and Even'),
+         '15':(fun_15, 'Sum Digit'),
+         '16':(fun_16, 'The Game')}
 
 
 def run_fun():
+   print('+++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++')
    [print('{}:{}, '.format(key, value[1]), end = '') for key, value in funcs.items()]
    print()
    user_message = 'Please select an option number between [1,16]: '
@@ -229,4 +229,5 @@ def run_fun():
       print('Please select o vaild option', ex)
    run_fun()
 
+   
 run_fun()
