@@ -1,4 +1,5 @@
 #! python 3.10.4
+import sys
 from colorama import Fore, init
 from datetime import datetime
 import random
@@ -38,8 +39,7 @@ def capture_user_input_float(user_message):
 
 
 def fun_0():
-   print("Thank you for using the program")
-   quit()
+   sys.exit("Thank you for using the program")
 
    
 def fun_1():
